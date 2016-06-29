@@ -6,13 +6,11 @@ namespace myPlace.Objects
   {
     private string _cityName;
     private static List<Place> _instances = new List<Place>{};
-    private static List<string> _cityNames = new List<string>{};
     private int _id;
     public Place(string CityName)
     {
       _cityName = CityName;
       _instances.Add(this);
-      _cityNames.Add(CityName);
       _id=_instances.Count;
     }
 
@@ -22,7 +20,16 @@ namespace myPlace.Objects
     }
     public static Place Find(string searchCityName)
     {
-      int searchIndex=_cityNames.IndexOf(searchCityName);
+      int counter=0;
+      int searchIndex=0;
+      foreach(var place in _instances)
+      {
+        if(place.GetCityName()==searchCityName)
+        {
+          searchIndex=counter;
+        }
+        counter++;
+      }
       return _instances[searchIndex];
     }
     public int GetID()
