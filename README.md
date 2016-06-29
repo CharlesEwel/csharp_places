@@ -2,7 +2,7 @@
 
 #### A simple list of Places I've Been.
 
-#### Made by Ryan Streuss and Charles Ewel
+#### Made by Ryan Streur and Charles Ewel
 
 ## Description
 
