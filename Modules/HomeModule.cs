@@ -19,8 +19,8 @@ namespace myPlaces
         List<Place> placeList = Place.GetAll();
         return View["view_all_places.cshtml", placeList];
       };
-      Get["/places/{id}"] = parameters => {
-        Place place = Place.Find(parameters.id);
+      Get["/places/{cityName}"] = parameters => {
+        Place place = Place.Find(parameters.cityName);
         return View["/place_details.cshtml", place];
       };
     }

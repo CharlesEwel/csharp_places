@@ -9,7 +9,7 @@
       <ul>
         @foreach (var place in Model)
         {
-          <li><a href="/places/@place.GetID()">@place.GetCityName()</a></li>
+          <li><a href="/places/@place.GetCityName()">@place.GetCityName()</a></li>
         }
       </ul>
       <a href="/add_place">Add a New Place</a>
